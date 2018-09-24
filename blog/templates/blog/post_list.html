@@ -1,8 +1,23 @@
 <html>
-  <head>
-  	<title>Koral
-  	</title>
-  	</head>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <head>
+        <title>Django  blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django G Blog</a></h1>
+        </div>
+
+        <div>
+        	{% for post in posts %}
+        	<div>
+        		<p>punlished: {{ post.published_date }}</p>
+        		<h1>
+        			<a href="">{{post.title}}</a>
+        		</h1>
+        		<p>{{post.text|linebreaksbr}}</p>
+        	</div>
+    
+{% endfor %}
+        </div>
+    </body>
 </html>
